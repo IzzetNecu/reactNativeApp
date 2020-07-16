@@ -14,8 +14,10 @@ import {
   View,
   Text,
   StatusBar,
+  Button,
 } from 'react-native';
 
+import LifeCounter from './Components/LifeCounter.js';
 import Wow from './Components/Wow.js';
 import {
   Header,
@@ -28,49 +30,22 @@ import {
 const App: () => React$Node = () => {
   return (
     <>
-      <Wow text={"great"}>
-      </Wow>
+      <Wow></Wow>
+      <View style={styles.flexBetween}>
+        <LifeCounter />
+        <LifeCounter />
+      </View>
+
     </>
   );
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
+  flexBetween: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  }
 });
 
 export default App;
