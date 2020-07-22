@@ -35,7 +35,6 @@ const App: () => React$Node = () => {
         <LifeCounter />
         <LifeCounter />
       </View>
-
     </>
   );
 };
