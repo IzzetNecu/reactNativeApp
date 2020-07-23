@@ -24,7 +24,6 @@ const LifeCounter = (prop) => {
         setVisible("none");
     }
 
-
     const styles = StyleSheet.create({
         container: {
             display: visible,
